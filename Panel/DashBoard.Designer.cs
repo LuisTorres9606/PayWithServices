@@ -39,11 +39,14 @@ namespace Presentation
             this.Minimizar = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.SliderPanel = new System.Windows.Forms.Panel();
+            this.LogOut = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.Bar_Principal.SuspendLayout();
             this.SliderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // User
@@ -52,7 +55,7 @@ namespace Presentation
             this.User.BackColor = System.Drawing.Color.Transparent;
             this.User.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
-            this.User.Location = new System.Drawing.Point(44, 68);
+            this.User.Location = new System.Drawing.Point(86, 12);
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(37, 21);
             this.User.TabIndex = 29;
@@ -64,7 +67,7 @@ namespace Presentation
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
-            this.label4.Location = new System.Drawing.Point(75, 536);
+            this.label4.Location = new System.Drawing.Point(75, 491);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 30);
             this.label4.TabIndex = 29;
@@ -74,9 +77,9 @@ namespace Presentation
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(70, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(68, 63);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -85,7 +88,7 @@ namespace Presentation
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(12, 531);
+            this.pictureBox11.Location = new System.Drawing.Point(12, 486);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(65, 57);
             this.pictureBox11.TabIndex = 28;
@@ -97,7 +100,7 @@ namespace Presentation
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(77, 569);
+            this.label2.Location = new System.Drawing.Point(77, 524);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 17);
             this.label2.TabIndex = 29;
@@ -109,9 +112,9 @@ namespace Presentation
             this.Bar_Principal.Controls.Add(this.Minimizar);
             this.Bar_Principal.Controls.Add(this.Exit);
             this.Bar_Principal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Bar_Principal.Location = new System.Drawing.Point(191, 0);
+            this.Bar_Principal.Location = new System.Drawing.Point(206, 0);
             this.Bar_Principal.Name = "Bar_Principal";
-            this.Bar_Principal.Size = new System.Drawing.Size(959, 32);
+            this.Bar_Principal.Size = new System.Drawing.Size(944, 32);
             this.Bar_Principal.TabIndex = 1;
             this.Bar_Principal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Bar_Principal_MouseDown);
             // 
@@ -122,7 +125,7 @@ namespace Presentation
             this.Minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Minimizar.FlatAppearance.BorderSize = 0;
             this.Minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Minimizar.Location = new System.Drawing.Point(910, 4);
+            this.Minimizar.Location = new System.Drawing.Point(894, 5);
             this.Minimizar.Name = "Minimizar";
             this.Minimizar.Size = new System.Drawing.Size(21, 21);
             this.Minimizar.TabIndex = 22;
@@ -136,7 +139,7 @@ namespace Presentation
             this.Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Exit.FlatAppearance.BorderSize = 0;
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Exit.Location = new System.Drawing.Point(934, 4);
+            this.Exit.Location = new System.Drawing.Point(918, 5);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(21, 21);
             this.Exit.TabIndex = 21;
@@ -146,6 +149,8 @@ namespace Presentation
             // SliderPanel
             // 
             this.SliderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
+            this.SliderPanel.Controls.Add(this.LogOut);
+            this.SliderPanel.Controls.Add(this.pictureBox2);
             this.SliderPanel.Controls.Add(this.pictureBox11);
             this.SliderPanel.Controls.Add(this.label2);
             this.SliderPanel.Controls.Add(this.pictureBox1);
@@ -154,18 +159,43 @@ namespace Presentation
             this.SliderPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SliderPanel.Location = new System.Drawing.Point(0, 0);
             this.SliderPanel.Name = "SliderPanel";
-            this.SliderPanel.Size = new System.Drawing.Size(191, 600);
+            this.SliderPanel.Size = new System.Drawing.Size(206, 600);
             this.SliderPanel.TabIndex = 0;
+            // 
+            // LogOut
+            // 
+            this.LogOut.BackColor = System.Drawing.Color.Transparent;
+            this.LogOut.FlatAppearance.BorderSize = 0;
+            this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.LogOut.Location = new System.Drawing.Point(42, 565);
+            this.LogOut.Name = "LogOut";
+            this.LogOut.Size = new System.Drawing.Size(87, 29);
+            this.LogOut.TabIndex = 3;
+            this.LogOut.Text = "Log Out";
+            this.LogOut.UseVisualStyleBackColor = false;
+            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 559);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(366, 127);
+            this.button1.Location = new System.Drawing.Point(212, 38);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DashBoard
             // 
@@ -187,6 +217,7 @@ namespace Presentation
             this.Bar_Principal.ResumeLayout(false);
             this.SliderPanel.ResumeLayout(false);
             this.SliderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,5 +233,7 @@ namespace Presentation
         private System.Windows.Forms.Button Minimizar;
         private System.Windows.Forms.Panel SliderPanel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LogOut;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

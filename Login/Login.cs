@@ -14,8 +14,6 @@ namespace Presentation
 {
     public partial class Login : Form
     {
-        private UsuarioModel Usuario;
-
         public Login()
         {
             InitializeComponent();
@@ -90,36 +88,41 @@ namespace Presentation
             }
         }
 
-        public void Reset()
-        {
-            v_Email.Text = "User";
-            v_Password.Text = "Password";
-        }
 
         private void GetStarted_Click(object sender, EventArgs e)
         {
-            string UserAcount = v_Email.Text;
-            string Password = v_Password.Text;
+            LoginUser();
+        }
 
-            Usuario = new Process().Login(UserAcount, Password);
+        public void LoginUser()
+        {
+            if (v_Email.Text != "User") {
+                if (v_Password.Text != "PassWord")
+                {
+                    Process ValidacionLogin = new Process();
+                    var Log = ValidacionLogin.LoginUser(v_Email.Text, v_Password.Text);
 
-            if (Usuario._UserAccount.Equals(UserAcount) && Usuario._Password.Equals(Password))
-            {
-                Reset();
+                    if (Log == true)
+                    {
+                        Login_Principal login = Owner as Login_Principal;
 
-                Login_Principal login = Owner as Login_Principal;
+                        this.Hide();
+                        login.Hide();
 
-                this.Hide();
-                login.Hide();
-
-                DashBoard Menu_Principal = new DashBoard(Usuario);
-                Menu_Principal.Show();
-
+                        DashBoard Menu_Principal = new DashBoard();
+                        Menu_Principal.Show();
+                    }
+                    else MsgError("Usuario o Contraseña son Incorrectos");
+                }
+                else MsgError("Please Enter Username ");
             }
-            else
-            {
-                ErroLogin.Visible = true;
-            }
+            else MsgError("Please Enter Password");
+        }
+
+        private void MsgError(string Msg)
+        {
+            ErroLogin.Text = Msg;
+            ErroLogin.Visible = true;
         }
     }
 }

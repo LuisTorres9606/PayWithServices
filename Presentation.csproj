@@ -67,6 +67,7 @@
     <Compile Include="Login\Login_Principal.Designer.cs">
       <DependentUpon>Login_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel\Writer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Login\SignIn.cs">
@@ -111,6 +112,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5666a579-05f8-450b-a72c-70c6e92336ae}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{9f27dcd2-7702-4b95-948d-473955fedfe5}</Project>
       <Name>Domain</Name>
