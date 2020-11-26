@@ -33,15 +33,16 @@ namespace Presentation
         {
             if (ActiveForm != null)
                 ActiveForm.Close();
-
+                AddOwnedForm(ChildForm);
                 ActiveForm = ChildForm;
                 ChildForm.TopLevel = false;
                 ChildForm.FormBorderStyle = FormBorderStyle.None;
                 ChildForm.Dock = DockStyle.Fill;
-                ChildForm.Parent = this;
                 v_Panel_ChildForm.Controls.Add(ChildForm);
                 v_Panel_ChildForm.Tag = ChildForm;
-                ChildForm.BringToFront();
+            
+                 ChildForm.BringToFront();
+                
                 ChildForm.Show();
 
             return true;

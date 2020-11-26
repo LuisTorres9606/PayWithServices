@@ -107,7 +107,7 @@ namespace Presentation
             {
                 Reset();
 
-                Login_Principal login = Parent as Login_Principal;
+                Login_Principal login = Owner as Login_Principal;
 
                 this.Hide();
                 login.Hide();
