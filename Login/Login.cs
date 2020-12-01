@@ -104,7 +104,7 @@ namespace Presentation
 
                     if (Log == true)
                     {
-                        Login_Principal login = Owner as Login_Principal;
+                        Login_Principal login = Owner as Login_Principal; /////<------Aquí
 
                         this.Hide();
                         login.Hide();

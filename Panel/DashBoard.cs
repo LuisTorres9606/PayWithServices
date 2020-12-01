@@ -11,8 +11,7 @@ using Domain.Models;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using Common.Cache;
-using System.IO;
-using System.Threading;
+using Presentation.PanelSub;
 
 namespace Presentation
 {
@@ -29,10 +28,6 @@ namespace Presentation
             InitializeComponent();
 
             User.Text = UserLoginCache.UserId.ToString();
-            Thread Session = new Thread(new ThreadStart(Registro));
-            Session.Start();
-
-           
 
         }
 
@@ -50,42 +45,47 @@ namespace Presentation
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        public void Registro()
-        {
-            string DataTime = DateTime.Now.ToString("d:MMMM:yyyy");
-            string DataHour = DateTime.Now.ToString("HH:mm:ss");
-
-            try
-            {
-                List<string> Usuario = new List<string>() { "Nombre:" + UserLoginCache.Nombre, "Apellidos: " + UserLoginCache.Apellidos, "Cedula: " + UserLoginCache.Cedula, "Día de Inicio Sesión " + DataTime, "Hora de Inicio Sesión " + DataHour };
-                using (StreamWriter Write = new StreamWriter("Registro" + UserLoginCache.UserId + ".txt"))
-                {
-                    foreach (string read in Usuario)
-                    {
-                        Write.WriteLine(read);
-                    }
-
-                    Write.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception " + ex.Message);
-            }
-            finally
-            {
-                Console.WriteLine("Executing Finally Block");
-
-            }
-        }
+        }        
 
         private void LogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
             Login_Principal _Principal = new Login_Principal();
             _Principal.Show();
+        }
+
+        //Método del ChildForm Login-SignIn
+        private new Form ActiveForm = null;
+        private bool OpenChildForm(Form ChildForm)
+        {
+            if (ActiveForm != null)
+                ActiveForm.Close();
+            AddOwnedForm(ChildForm); /////<------Aquí
+            ActiveForm = ChildForm;
+            ChildForm.TopLevel = false;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.Dock = DockStyle.Fill;
+            ChildPanel.Controls.Add(ChildForm);
+            ChildPanel.Tag = ChildForm;
+
+            ChildForm.BringToFront();
+
+            ChildForm.Show();
+
+            return true;
+        }
+
+        private void Works_Click(object sender, EventArgs e)
+        {
+            if (OpenChildForm(new ChildWorks()))
+            {
+                Works.BackColor = Color.FromArgb(19, 166, 212);
+            }
+        }
+
+        private void AddWorks_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

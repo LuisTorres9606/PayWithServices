@@ -33,7 +33,7 @@ namespace Presentation
         {
             if (ActiveForm != null)
                 ActiveForm.Close();
-                AddOwnedForm(ChildForm);
+                AddOwnedForm(ChildForm); /////<------Aquí
                 ActiveForm = ChildForm;
                 ChildForm.TopLevel = false;
                 ChildForm.FormBorderStyle = FormBorderStyle.None;
