@@ -61,10 +61,9 @@ namespace Presentation
             this.v_Panel_ChildForm.Controls.Add(this.label4);
             this.v_Panel_ChildForm.Controls.Add(this.pictureBox11);
             this.v_Panel_ChildForm.Controls.Add(this.label2);
-            this.v_Panel_ChildForm.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.v_Panel_ChildForm.Location = new System.Drawing.Point(324, 28);
             this.v_Panel_ChildForm.Name = "v_Panel_ChildForm";
-            this.v_Panel_ChildForm.Size = new System.Drawing.Size(502, 414);
+            this.v_Panel_ChildForm.Size = new System.Drawing.Size(522, 414);
             this.v_Panel_ChildForm.TabIndex = 1;
             this.v_Panel_ChildForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.v_Panel_ChildForm_MouseDown);
             // 

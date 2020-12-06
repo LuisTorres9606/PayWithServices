@@ -36,8 +36,8 @@ namespace Presentation
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.R_AreaLab = new System.Windows.Forms.ComboBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.R_Area = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.R_Telefono = new System.Windows.Forms.TextBox();
@@ -119,7 +119,7 @@ namespace Presentation
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(502, 414);
+            this.panel4.Size = new System.Drawing.Size(522, 414);
             this.panel4.TabIndex = 18;
             // 
             // label3
@@ -171,12 +171,25 @@ namespace Presentation
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
+            this.panel11.Controls.Add(this.R_AreaLab);
             this.panel11.Controls.Add(this.pictureBox9);
-            this.panel11.Controls.Add(this.R_Area);
             this.panel11.Location = new System.Drawing.Point(90, 724);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(314, 37);
             this.panel11.TabIndex = 17;
+            // 
+            // R_AreaLab
+            // 
+            this.R_AreaLab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
+            this.R_AreaLab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R_AreaLab.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.R_AreaLab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.R_AreaLab.FormattingEnabled = true;
+            this.R_AreaLab.Location = new System.Drawing.Point(43, 5);
+            this.R_AreaLab.Name = "R_AreaLab";
+            this.R_AreaLab.Size = new System.Drawing.Size(271, 29);
+            this.R_AreaLab.TabIndex = 12;
+            this.R_AreaLab.Text = "Selecciona Una Carrera";
             // 
             // pictureBox9
             // 
@@ -188,18 +201,6 @@ namespace Presentation
             this.pictureBox9.Size = new System.Drawing.Size(30, 29);
             this.pictureBox9.TabIndex = 11;
             this.pictureBox9.TabStop = false;
-            // 
-            // R_Area
-            // 
-            this.R_Area.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
-            this.R_Area.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.R_Area.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_Area.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
-            this.R_Area.Location = new System.Drawing.Point(43, 9);
-            this.R_Area.Name = "R_Area";
-            this.R_Area.Size = new System.Drawing.Size(264, 20);
-            this.R_Area.TabIndex = 2;
-            this.R_Area.Text = "Area Laboral";
             // 
             // panel9
             // 
@@ -229,10 +230,13 @@ namespace Presentation
             this.R_Telefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.R_Telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
             this.R_Telefono.Location = new System.Drawing.Point(43, 9);
+            this.R_Telefono.MaxLength = 8;
             this.R_Telefono.Name = "R_Telefono";
             this.R_Telefono.Size = new System.Drawing.Size(264, 20);
             this.R_Telefono.TabIndex = 2;
             this.R_Telefono.Text = "Telefono";
+            this.R_Telefono.Enter += new System.EventHandler(this.R_Telefono_Enter);
+            this.R_Telefono.Leave += new System.EventHandler(this.R_Telefono_Leave);
             // 
             // panel8
             // 
@@ -262,17 +266,20 @@ namespace Presentation
             this.R_Cedula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.R_Cedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
             this.R_Cedula.Location = new System.Drawing.Point(43, 9);
+            this.R_Cedula.MaxLength = 9;
             this.R_Cedula.Name = "R_Cedula";
             this.R_Cedula.Size = new System.Drawing.Size(264, 20);
             this.R_Cedula.TabIndex = 2;
             this.R_Cedula.Text = "Cedula";
+            this.R_Cedula.Enter += new System.EventHandler(this.R_Cedula_Enter);
+            this.R_Cedula.Leave += new System.EventHandler(this.R_Cedula_Leave);
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.panel10.Controls.Add(this.pictureBox8);
             this.panel10.Controls.Add(this.R_Email);
-            this.panel10.Location = new System.Drawing.Point(90, 617);
+            this.panel10.Location = new System.Drawing.Point(90, 616);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(314, 37);
             this.panel10.TabIndex = 15;
@@ -299,6 +306,7 @@ namespace Presentation
             this.R_Email.Size = new System.Drawing.Size(264, 20);
             this.R_Email.TabIndex = 2;
             this.R_Email.Text = "Email";
+            this.R_Email.Enter += new System.EventHandler(this.R_Email_Enter);
             // 
             // label1
             // 
@@ -343,6 +351,8 @@ namespace Presentation
             this.R_Apellidos.Size = new System.Drawing.Size(264, 20);
             this.R_Apellidos.TabIndex = 2;
             this.R_Apellidos.Text = "Apellidos";
+            this.R_Apellidos.Enter += new System.EventHandler(this.R_Apellidos_Enter);
+            this.R_Apellidos.Leave += new System.EventHandler(this.R_Apellidos_Leave);
             // 
             // panel6
             // 
@@ -376,13 +386,15 @@ namespace Presentation
             this.R_Nombre.Size = new System.Drawing.Size(264, 20);
             this.R_Nombre.TabIndex = 2;
             this.R_Nombre.Text = "Nombre Completo";
+            this.R_Nombre.Enter += new System.EventHandler(this.R_Nombre_Enter);
+            this.R_Nombre.Leave += new System.EventHandler(this.R_Nombre_Leave);
             // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 823);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(485, 66);
+            this.panel5.Size = new System.Drawing.Size(505, 66);
             this.panel5.TabIndex = 18;
             // 
             // panel2
@@ -416,9 +428,9 @@ namespace Presentation
             this.R_UserAccount.Name = "R_UserAccount";
             this.R_UserAccount.Size = new System.Drawing.Size(264, 20);
             this.R_UserAccount.TabIndex = 2;
-            this.R_UserAccount.Text = "Email";
-            this.R_UserAccount.Enter += new System.EventHandler(this.v_Email_Enter);
-            this.R_UserAccount.Leave += new System.EventHandler(this.v_Email_Leave);
+            this.R_UserAccount.Text = "User";
+            this.R_UserAccount.Enter += new System.EventHandler(this.R_UserAccount_Enter);
+            this.R_UserAccount.Leave += new System.EventHandler(this.R_UserAccount_Leave);
             // 
             // ErrorPassword
             // 
@@ -576,7 +588,7 @@ namespace Presentation
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(502, 414);
+            this.ClientSize = new System.Drawing.Size(522, 414);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignIn";
@@ -585,7 +597,6 @@ namespace Presentation
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -636,19 +647,14 @@ namespace Presentation
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Added;
         private System.Windows.Forms.Label ErrorPassword;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.TextBox R_Area;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TextBox R_Telefono;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.TextBox R_Cedula;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.TextBox R_Email;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -660,5 +666,10 @@ namespace Presentation
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.ComboBox R_AreaLab;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.TextBox R_Email;
     }
 }

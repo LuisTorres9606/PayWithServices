@@ -30,6 +30,7 @@ namespace Presentation.PanelSub
         private void InitializeComponent()
         {
             this.v_Login = new System.Windows.Forms.Button();
+            this.Favorite = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // v_Login
@@ -47,20 +48,36 @@ namespace Presentation.PanelSub
             this.v_Login.Text = "Ver Oferta";
             this.v_Login.UseVisualStyleBackColor = false;
             // 
+            // Favorite
+            // 
+            this.Favorite.AutoSize = true;
+            this.Favorite.BackColor = System.Drawing.Color.Transparent;
+            this.Favorite.CheckAlign = System.Drawing.ContentAlignment.TopRight;
+            this.Favorite.FlatAppearance.BorderSize = 0;
+            this.Favorite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Favorite.Location = new System.Drawing.Point(132, 3);
+            this.Favorite.Name = "Favorite";
+            this.Favorite.Size = new System.Drawing.Size(12, 11);
+            this.Favorite.TabIndex = 2;
+            this.Favorite.UseVisualStyleBackColor = false;
+            // 
             // ItemWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
+            this.Controls.Add(this.Favorite);
             this.Controls.Add(this.v_Login);
             this.Name = "ItemWork";
             this.Size = new System.Drawing.Size(150, 182);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button v_Login;
+        private System.Windows.Forms.CheckBox Favorite;
     }
 }
