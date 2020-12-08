@@ -38,9 +38,9 @@ namespace Presentation
             this.SliderPanel = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.AddWork = new System.Windows.Forms.Button();
+            this.AddService = new System.Windows.Forms.Button();
             this.LogOut = new System.Windows.Forms.Button();
-            this.Works = new System.Windows.Forms.Button();
+            this.Service = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ChildPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,7 +54,7 @@ namespace Presentation
             this.User.AutoSize = true;
             this.User.BackColor = System.Drawing.Color.Transparent;
             this.User.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.User.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.User.Location = new System.Drawing.Point(92, 21);
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(37, 21);
@@ -116,9 +116,9 @@ namespace Presentation
             this.SliderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
             this.SliderPanel.Controls.Add(this.button3);
             this.SliderPanel.Controls.Add(this.button2);
-            this.SliderPanel.Controls.Add(this.AddWork);
+            this.SliderPanel.Controls.Add(this.AddService);
             this.SliderPanel.Controls.Add(this.LogOut);
-            this.SliderPanel.Controls.Add(this.Works);
+            this.SliderPanel.Controls.Add(this.Service);
             this.SliderPanel.Controls.Add(this.pictureBox2);
             this.SliderPanel.Controls.Add(this.pictureBox1);
             this.SliderPanel.Controls.Add(this.User);
@@ -133,13 +133,13 @@ namespace Presentation
             this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(3, 342);
+            this.button3.Location = new System.Drawing.Point(3, 324);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(204, 40);
+            this.button3.Size = new System.Drawing.Size(203, 40);
             this.button3.TabIndex = 33;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = false;
@@ -149,33 +149,33 @@ namespace Presentation
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(3, 296);
+            this.button2.Location = new System.Drawing.Point(3, 283);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(204, 40);
             this.button2.TabIndex = 32;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // AddWork
+            // AddService
             // 
-            this.AddWork.BackColor = System.Drawing.Color.Transparent;
-            this.AddWork.FlatAppearance.BorderSize = 0;
-            this.AddWork.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.AddWork.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
-            this.AddWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddWork.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.AddWork.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AddWork.Location = new System.Drawing.Point(3, 204);
-            this.AddWork.Name = "AddWork";
-            this.AddWork.Size = new System.Drawing.Size(204, 40);
-            this.AddWork.TabIndex = 31;
-            this.AddWork.Text = "New Work";
-            this.AddWork.UseVisualStyleBackColor = false;
-            this.AddWork.Click += new System.EventHandler(this.AddWorks_Click);
+            this.AddService.BackColor = System.Drawing.Color.Transparent;
+            this.AddService.FlatAppearance.BorderSize = 0;
+            this.AddService.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.AddService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.AddService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddService.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.AddService.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.AddService.Location = new System.Drawing.Point(3, 204);
+            this.AddService.Name = "AddService";
+            this.AddService.Size = new System.Drawing.Size(203, 40);
+            this.AddService.TabIndex = 31;
+            this.AddService.Text = "New Service";
+            this.AddService.UseVisualStyleBackColor = false;
+            this.AddService.Click += new System.EventHandler(this.AddService_Click);
             // 
             // LogOut
             // 
@@ -195,22 +195,22 @@ namespace Presentation
             this.LogOut.UseVisualStyleBackColor = false;
             this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
             // 
-            // Works
+            // Service
             // 
-            this.Works.BackColor = System.Drawing.Color.Transparent;
-            this.Works.FlatAppearance.BorderSize = 0;
-            this.Works.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Works.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
-            this.Works.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Works.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.Works.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Works.Location = new System.Drawing.Point(2, 250);
-            this.Works.Name = "Works";
-            this.Works.Size = new System.Drawing.Size(204, 40);
-            this.Works.TabIndex = 2;
-            this.Works.Text = "Works";
-            this.Works.UseVisualStyleBackColor = false;
-            this.Works.Click += new System.EventHandler(this.Works_Click);
+            this.Service.BackColor = System.Drawing.Color.Transparent;
+            this.Service.FlatAppearance.BorderSize = 0;
+            this.Service.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.Service.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.Service.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Service.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.Service.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Service.Location = new System.Drawing.Point(2, 243);
+            this.Service.Name = "Service";
+            this.Service.Size = new System.Drawing.Size(204, 40);
+            this.Service.TabIndex = 2;
+            this.Service.Text = "Services";
+            this.Service.UseVisualStyleBackColor = false;
+            this.Service.Click += new System.EventHandler(this.Service_Click);
             // 
             // pictureBox2
             // 
@@ -262,12 +262,12 @@ namespace Presentation
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button Minimizar;
         private System.Windows.Forms.Panel SliderPanel;
-        private System.Windows.Forms.Button Works;
+        private System.Windows.Forms.Button Service;
         private System.Windows.Forms.Button LogOut;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel ChildPanel;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button AddWork;
+        private System.Windows.Forms.Button AddService;
     }
 }

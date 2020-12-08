@@ -165,7 +165,8 @@ namespace Presentation
             // 
             this.v_SignIn.BackColor = System.Drawing.Color.Transparent;
             this.v_SignIn.FlatAppearance.BorderSize = 0;
-            this.v_SignIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.v_SignIn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
+            this.v_SignIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
             this.v_SignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.v_SignIn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.v_SignIn.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -181,7 +182,8 @@ namespace Presentation
             // 
             this.v_Login.BackColor = System.Drawing.Color.Transparent;
             this.v_Login.FlatAppearance.BorderSize = 0;
-            this.v_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.v_Login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
+            this.v_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
             this.v_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.v_Login.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.v_Login.ForeColor = System.Drawing.SystemColors.ButtonFace;

@@ -59,7 +59,7 @@ namespace Presentation
             this.v_Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.v_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.v_Email.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.v_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.v_Email.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.v_Email.Location = new System.Drawing.Point(43, 9);
             this.v_Email.Name = "v_Email";
             this.v_Email.Size = new System.Drawing.Size(264, 20);
@@ -73,7 +73,7 @@ namespace Presentation
             this.v_Password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.v_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.v_Password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.v_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.v_Password.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.v_Password.Location = new System.Drawing.Point(43, 9);
             this.v_Password.Name = "v_Password";
             this.v_Password.Size = new System.Drawing.Size(236, 20);
@@ -95,7 +95,7 @@ namespace Presentation
             // 
             // GetStarted
             // 
-            this.GetStarted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.GetStarted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
             this.GetStarted.FlatAppearance.BorderSize = 0;
             this.GetStarted.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GetStarted.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -192,8 +192,8 @@ namespace Presentation
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(107, 132);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(105, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(294, 17);
             this.label2.TabIndex = 24;

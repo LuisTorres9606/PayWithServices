@@ -75,17 +75,22 @@ namespace Presentation
             return true;
         }
 
-        private void Works_Click(object sender, EventArgs e)
+        private void Service_Click(object sender, EventArgs e)
         {
-            if (OpenChildForm(new ChildWorks()))
+            if (OpenChildForm(new Service()))
             {
-                Works.BackColor = Color.FromArgb(19, 166, 212);
+                Service.BackColor = Color.FromArgb(31, 82, 107);
+                AddService.BackColor = Color.Transparent;
             }
         }
 
-        private void AddWorks_Click(object sender, EventArgs e)
+        private void AddService_Click(object sender, EventArgs e)
         {
-
+            if(OpenChildForm(new AddService()))
+            {
+                AddService.BackColor = Color.FromArgb(31, 82, 107);
+                Service.BackColor = Color.Transparent;
+            }
         }
     }
 }

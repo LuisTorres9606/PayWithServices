@@ -25,6 +25,10 @@ namespace Presentation
         {
             List<Carrera> Item = new Process().Carreras();
 
+            R_AreaLab.DropDownStyle = ComboBoxStyle.DropDownList;
+            R_AreaLab.Items.Insert(0,"Selecciona tu Carrera: ");
+            R_AreaLab.SelectedIndex = 0;
+
             foreach(Carrera Ca in Item)
             {
                 R_AreaLab.Items.Add(Ca.NombreCarrera);

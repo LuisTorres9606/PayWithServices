@@ -161,8 +161,8 @@ namespace Presentation
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(93, 174);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(103, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(294, 17);
             this.label2.TabIndex = 23;
@@ -181,15 +181,17 @@ namespace Presentation
             // R_AreaLab
             // 
             this.R_AreaLab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
+            this.R_AreaLab.CausesValidation = false;
             this.R_AreaLab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.R_AreaLab.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.R_AreaLab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.R_AreaLab.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.R_AreaLab.FormattingEnabled = true;
             this.R_AreaLab.Location = new System.Drawing.Point(43, 5);
+            this.R_AreaLab.MaxDropDownItems = 100;
             this.R_AreaLab.Name = "R_AreaLab";
             this.R_AreaLab.Size = new System.Drawing.Size(271, 29);
             this.R_AreaLab.TabIndex = 12;
-            this.R_AreaLab.Text = "Selecciona Una Carrera";
+            this.R_AreaLab.Text = "Selecciona tu Carrera";
             // 
             // pictureBox9
             // 
@@ -228,7 +230,7 @@ namespace Presentation
             this.R_Telefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.R_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.R_Telefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_Telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.R_Telefono.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.R_Telefono.Location = new System.Drawing.Point(43, 9);
             this.R_Telefono.MaxLength = 8;
             this.R_Telefono.Name = "R_Telefono";
@@ -264,7 +266,7 @@ namespace Presentation
             this.R_Cedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.R_Cedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.R_Cedula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_Cedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.R_Cedula.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.R_Cedula.Location = new System.Drawing.Point(43, 9);
             this.R_Cedula.MaxLength = 9;
             this.R_Cedula.Name = "R_Cedula";
@@ -300,7 +302,7 @@ namespace Presentation
             this.R_Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.R_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.R_Email.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.R_Email.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.R_Email.Location = new System.Drawing.Point(43, 9);
             this.R_Email.Name = "R_Email";
             this.R_Email.Size = new System.Drawing.Size(264, 20);
@@ -345,7 +347,7 @@ namespace Presentation
             this.R_Apellidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.R_Apellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.R_Apellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_Apellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.R_Apellidos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.R_Apellidos.Location = new System.Drawing.Point(43, 9);
             this.R_Apellidos.Name = "R_Apellidos";
             this.R_Apellidos.Size = new System.Drawing.Size(264, 20);
@@ -380,7 +382,7 @@ namespace Presentation
             this.R_Nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.R_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.R_Nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.R_Nombre.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.R_Nombre.Location = new System.Drawing.Point(43, 9);
             this.R_Nombre.Name = "R_Nombre";
             this.R_Nombre.Size = new System.Drawing.Size(264, 20);
@@ -423,7 +425,7 @@ namespace Presentation
             this.R_UserAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.R_UserAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.R_UserAccount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_UserAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.R_UserAccount.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.R_UserAccount.Location = new System.Drawing.Point(43, 9);
             this.R_UserAccount.Name = "R_UserAccount";
             this.R_UserAccount.Size = new System.Drawing.Size(264, 20);
@@ -497,7 +499,7 @@ namespace Presentation
             this.R_Password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.R_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.R_Password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.R_Password.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.R_Password.Location = new System.Drawing.Point(43, 9);
             this.R_Password.Name = "R_Password";
             this.R_Password.Size = new System.Drawing.Size(236, 20);
@@ -508,7 +510,7 @@ namespace Presentation
             // 
             // Added
             // 
-            this.Added.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.Added.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
             this.Added.FlatAppearance.BorderSize = 0;
             this.Added.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Added.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -574,7 +576,7 @@ namespace Presentation
             this.R_PasswordCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.R_PasswordCon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.R_PasswordCon.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_PasswordCon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(166)))), ((int)(((byte)(212)))));
+            this.R_PasswordCon.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.R_PasswordCon.Location = new System.Drawing.Point(43, 9);
             this.R_PasswordCon.Name = "R_PasswordCon";
             this.R_PasswordCon.Size = new System.Drawing.Size(236, 20);
