@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "..\Domain\Domain.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\Common\Common.csproj", "{5666A579-05F8-450B-A72C-70C6E92336AE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Query", "Query", "{555856E9-A4B6-4000-8F58-EC4053517D3E}"
+	ProjectSection(SolutionItems) = preProject
+		Inserts-StoredProcedures.sql = Inserts-StoredProcedures.sql
+		Tablas.sql = Tablas.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
