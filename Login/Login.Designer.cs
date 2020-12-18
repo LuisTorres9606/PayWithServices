@@ -78,7 +78,7 @@ namespace Presentation
             this.v_Password.Name = "v_Password";
             this.v_Password.Size = new System.Drawing.Size(236, 20);
             this.v_Password.TabIndex = 3;
-            this.v_Password.Text = "LuisFer9606nando";
+            this.v_Password.Text = "Wen9803";
             this.v_Password.Enter += new System.EventHandler(this.v_Password_Enter);
             this.v_Password.Leave += new System.EventHandler(this.v_Password_Leave);
             // 

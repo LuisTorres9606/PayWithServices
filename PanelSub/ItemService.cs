@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -28,7 +29,7 @@ namespace Presentation.PanelSub
         public ItemService(Servicio servicio)
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
 
             Item(servicio);
         }
@@ -36,9 +37,10 @@ namespace Presentation.PanelSub
         public void Item(Servicio servicio)
         {
             User.Text = servicio.User;
+            Fecha.Text = "Publicado: "+servicio.Fecha;
             Brind.Text = servicio.NombreBrin;
             Busque.Text = servicio.NombreBusq;
-            ValorPromedio.Text = servicio.ValorPromedio.ToString();
+            ValorPromedio.Text = "₡ "+ String.Format(CultureInfo.InvariantCulture, "{0:0,0.0}", servicio.ValorPromedio);
 
             if (servicio.User == UserLoginCache.UserId)
             {

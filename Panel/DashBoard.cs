@@ -27,7 +27,18 @@ namespace Presentation
         {
             InitializeComponent();
 
+            if (OpenChildForm(new Service())){Service.BackColor = Color.FromArgb(31, 82, 107);AddService.BackColor = Color.Transparent;}
+            
             User.Text = UserLoginCache.UserId.ToString();
+
+            if (UserLoginCache.Sexo == "Masculino")
+            {
+                PictureUserMale.Visible = true;
+            }
+            else
+                PictureUserFemale.Visible = true;
+
+
 
         }
 

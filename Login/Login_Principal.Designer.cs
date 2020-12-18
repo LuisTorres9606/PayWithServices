@@ -200,6 +200,7 @@ namespace Presentation
             this.Panel_Botones.BackColor = System.Drawing.Color.Transparent;
             this.Panel_Botones.Controls.Add(this.Minimizar);
             this.Panel_Botones.Controls.Add(this.Exit);
+            this.Panel_Botones.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Panel_Botones.Location = new System.Drawing.Point(324, 0);
             this.Panel_Botones.Name = "Panel_Botones";
             this.Panel_Botones.Size = new System.Drawing.Size(502, 34);

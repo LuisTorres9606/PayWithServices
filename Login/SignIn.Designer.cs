@@ -31,6 +31,9 @@ namespace Presentation
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignIn));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.R_Sexo = new System.Windows.Forms.ComboBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -71,6 +74,8 @@ namespace Presentation
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.R_PasswordCon = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -99,6 +104,7 @@ namespace Presentation
             // panel4
             // 
             this.panel4.AutoScroll = true;
+            this.panel4.Controls.Add(this.panel12);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.pictureBox11);
@@ -121,6 +127,42 @@ namespace Presentation
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(522, 414);
             this.panel4.TabIndex = 18;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
+            this.panel12.Controls.Add(this.R_Sexo);
+            this.panel12.Controls.Add(this.pictureBox10);
+            this.panel12.Location = new System.Drawing.Point(90, 559);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(314, 37);
+            this.panel12.TabIndex = 32;
+            // 
+            // R_Sexo
+            // 
+            this.R_Sexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
+            this.R_Sexo.CausesValidation = false;
+            this.R_Sexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R_Sexo.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.R_Sexo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.R_Sexo.FormattingEnabled = true;
+            this.R_Sexo.Location = new System.Drawing.Point(43, 5);
+            this.R_Sexo.MaxDropDownItems = 100;
+            this.R_Sexo.Name = "R_Sexo";
+            this.R_Sexo.Size = new System.Drawing.Size(271, 29);
+            this.R_Sexo.TabIndex = 12;
+            this.R_Sexo.Text = "Selecciona tu Sexo";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(6, 5);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox10.TabIndex = 11;
+            this.pictureBox10.TabStop = false;
             // 
             // label3
             // 
@@ -173,7 +215,7 @@ namespace Presentation
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.panel11.Controls.Add(this.R_AreaLab);
             this.panel11.Controls.Add(this.pictureBox9);
-            this.panel11.Location = new System.Drawing.Point(90, 724);
+            this.panel11.Location = new System.Drawing.Point(90, 766);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(314, 37);
             this.panel11.TabIndex = 17;
@@ -209,7 +251,7 @@ namespace Presentation
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.panel9.Controls.Add(this.pictureBox7);
             this.panel9.Controls.Add(this.R_Telefono);
-            this.panel9.Location = new System.Drawing.Point(90, 669);
+            this.panel9.Location = new System.Drawing.Point(90, 711);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(314, 37);
             this.panel9.TabIndex = 16;
@@ -245,7 +287,7 @@ namespace Presentation
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.panel8.Controls.Add(this.pictureBox6);
             this.panel8.Controls.Add(this.R_Cedula);
-            this.panel8.Location = new System.Drawing.Point(90, 564);
+            this.panel8.Location = new System.Drawing.Point(90, 606);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(314, 37);
             this.panel8.TabIndex = 14;
@@ -281,7 +323,7 @@ namespace Presentation
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.panel10.Controls.Add(this.pictureBox8);
             this.panel10.Controls.Add(this.R_Email);
-            this.panel10.Location = new System.Drawing.Point(90, 616);
+            this.panel10.Location = new System.Drawing.Point(90, 658);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(314, 37);
             this.panel10.TabIndex = 15;
@@ -309,6 +351,7 @@ namespace Presentation
             this.R_Email.TabIndex = 2;
             this.R_Email.Text = "Email";
             this.R_Email.Enter += new System.EventHandler(this.R_Email_Enter);
+            this.R_Email.Leave += new System.EventHandler(this.R_Email_Leave);
             // 
             // label1
             // 
@@ -394,7 +437,7 @@ namespace Presentation
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 823);
+            this.panel5.Location = new System.Drawing.Point(0, 865);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(505, 66);
             this.panel5.TabIndex = 18;
@@ -515,7 +558,7 @@ namespace Presentation
             this.Added.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Added.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Added.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Added.Location = new System.Drawing.Point(182, 780);
+            this.Added.Location = new System.Drawing.Point(182, 822);
             this.Added.Name = "Added";
             this.Added.Size = new System.Drawing.Size(133, 43);
             this.Added.TabIndex = 16;
@@ -597,6 +640,8 @@ namespace Presentation
             this.Text = "SignIn";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -673,5 +718,8 @@ namespace Presentation
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.TextBox R_Email;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.ComboBox R_Sexo;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

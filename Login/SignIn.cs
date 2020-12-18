@@ -18,7 +18,16 @@ namespace Presentation
         public SignIn()
         {
             InitializeComponent();
+            Sexo();
             Carreras();
+        }
+        public void Sexo()
+        {
+            R_Sexo.DropDownStyle = ComboBoxStyle.DropDownList;
+            R_Sexo.Items.Insert(0, "Selecciona tu Sexo: ");
+            R_Sexo.Items.Insert(1, "Masculino");
+            R_Sexo.Items.Insert(2, "Femenino");
+            R_Sexo.SelectedIndex = 0;
         }
 
         public void Carreras()
@@ -195,7 +204,7 @@ namespace Presentation
 
         private void R_Email_Enter(object sender, EventArgs e)
         {
-            if (R_Email.Text == "Email")
+            if(R_Email.Text == "Email")
             {
                 R_Email.Text = "";
             }
@@ -208,6 +217,7 @@ namespace Presentation
                 R_Email.Text = "Email";
             }
         }
+
 
         private void R_Telefono_Enter(object sender, EventArgs e)
         {
@@ -234,6 +244,7 @@ namespace Presentation
             model._Cedula = R_Cedula.Text;
             model._Nombre = R_Nombre.Text;
             model._Apellidos = R_Apellidos.Text;
+            model._Sexo = R_Sexo.Text;
             model._Email = R_Email.Text;
             model._Telefono = R_Telefono.Text;
             model._AreaLaboral = R_AreaLab.Text;
@@ -258,5 +269,7 @@ namespace Presentation
             else
                 ErrorPassword.Visible = true;
         }
+
+
     }
 }
