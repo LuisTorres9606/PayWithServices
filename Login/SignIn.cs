@@ -258,7 +258,7 @@ namespace Presentation
 
             if (R_Password.Text == R_PasswordCon.Text)
             {
-                if (Insertar.InsertarUsuario(Model()))
+                if (Insertar.InsertarUsuario(Model(), ProfilePicture))
                 {
                     MessageBox.Show("El Usuario ha sido creado exitosamente");
                 }
@@ -270,6 +270,27 @@ namespace Presentation
                 ErrorPassword.Visible = true;
         }
 
+        
+        private void ProfilePicture_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                openFileDialog1.Filter = "Archivos jpg (*.jpg)|*.jpg";
+                openFileDialog1.FilterIndex = 1;
+                openFileDialog1.RestoreDirectory = true;
+                openFileDialog1.FileName = "";
+                if (this.openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
 
+                    ProfilePicture.Load(this.openFileDialog1.FileName);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                MessageBox.Show("No se pudo cargar la imagen de perfil");
+            }
+        }
     }
 }

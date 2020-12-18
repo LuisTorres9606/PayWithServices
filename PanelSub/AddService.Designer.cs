@@ -146,6 +146,7 @@ namespace Presentation.PanelSub
             this.Description2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Description2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Description2.Location = new System.Drawing.Point(33, 392);
+            this.Description2.MaxLength = 300;
             this.Description2.Multiline = true;
             this.Description2.Name = "Description2";
             this.Description2.Size = new System.Drawing.Size(410, 49);
@@ -170,6 +171,7 @@ namespace Presentation.PanelSub
             this.Description1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Description1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Description1.Location = new System.Drawing.Point(33, 204);
+            this.Description1.MaxLength = 300;
             this.Description1.Multiline = true;
             this.Description1.Name = "Description1";
             this.Description1.Size = new System.Drawing.Size(397, 49);
@@ -193,7 +195,7 @@ namespace Presentation.PanelSub
             this.NombreServicio1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.NombreServicio1.HideSelection = false;
             this.NombreServicio1.Location = new System.Drawing.Point(33, 152);
-            this.NombreServicio1.MaxLength = 10;
+            this.NombreServicio1.MaxLength = 25;
             this.NombreServicio1.Name = "NombreServicio1";
             this.NombreServicio1.Size = new System.Drawing.Size(181, 26);
             this.NombreServicio1.TabIndex = 43;
@@ -219,7 +221,7 @@ namespace Presentation.PanelSub
             this.NombreServicio2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.NombreServicio2.HideSelection = false;
             this.NombreServicio2.Location = new System.Drawing.Point(33, 340);
-            this.NombreServicio2.MaxLength = 10;
+            this.NombreServicio2.MaxLength = 25;
             this.NombreServicio2.Name = "NombreServicio2";
             this.NombreServicio2.Size = new System.Drawing.Size(181, 26);
             this.NombreServicio2.TabIndex = 45;

@@ -30,13 +30,12 @@ namespace Presentation
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
-            this.PictureUserMale = new System.Windows.Forms.PictureBox();
+            this.PictureUser = new System.Windows.Forms.PictureBox();
             this.Bar_Principal = new System.Windows.Forms.Panel();
             this.Minimizar = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.SliderPanel = new System.Windows.Forms.Panel();
             this.User = new System.Windows.Forms.TextBox();
-            this.PictureUserFemale = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.AddService = new System.Windows.Forms.Button();
@@ -44,23 +43,23 @@ namespace Presentation
             this.Service = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ChildPanel = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUserMale)).BeginInit();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureUser)).BeginInit();
             this.Bar_Principal.SuspendLayout();
             this.SliderPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUserFemale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // PictureUserMale
+            // PictureUser
             // 
-            this.PictureUserMale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PictureUserMale.Image = global::Presentation.Properties.Resources.Male;
-            this.PictureUserMale.Location = new System.Drawing.Point(48, 12);
-            this.PictureUserMale.Name = "PictureUserMale";
-            this.PictureUserMale.Size = new System.Drawing.Size(100, 96);
-            this.PictureUserMale.TabIndex = 2;
-            this.PictureUserMale.TabStop = false;
-            this.PictureUserMale.Visible = false;
+            this.PictureUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PictureUser.Location = new System.Drawing.Point(35, 32);
+            this.PictureUser.Name = "PictureUser";
+            this.PictureUser.Size = new System.Drawing.Size(130, 125);
+            this.PictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureUser.TabIndex = 2;
+            this.PictureUser.TabStop = false;
+            this.PictureUser.Click += new System.EventHandler(this.PictureUser_Click);
             // 
             // Bar_Principal
             // 
@@ -107,14 +106,13 @@ namespace Presentation
             // 
             this.SliderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
             this.SliderPanel.Controls.Add(this.User);
-            this.SliderPanel.Controls.Add(this.PictureUserFemale);
             this.SliderPanel.Controls.Add(this.button3);
             this.SliderPanel.Controls.Add(this.button2);
             this.SliderPanel.Controls.Add(this.AddService);
             this.SliderPanel.Controls.Add(this.LogOut);
             this.SliderPanel.Controls.Add(this.Service);
             this.SliderPanel.Controls.Add(this.pictureBox2);
-            this.SliderPanel.Controls.Add(this.PictureUserMale);
+            this.SliderPanel.Controls.Add(this.PictureUser);
             this.SliderPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SliderPanel.Location = new System.Drawing.Point(0, 0);
             this.SliderPanel.Name = "SliderPanel";
@@ -127,22 +125,11 @@ namespace Presentation
             this.User.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.User.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.User.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.User.Location = new System.Drawing.Point(27, 114);
+            this.User.Location = new System.Drawing.Point(29, 163);
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(141, 20);
             this.User.TabIndex = 35;
             this.User.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // PictureUserFemale
-            // 
-            this.PictureUserFemale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PictureUserFemale.Image = global::Presentation.Properties.Resources.Female;
-            this.PictureUserFemale.Location = new System.Drawing.Point(48, 12);
-            this.PictureUserFemale.Name = "PictureUserFemale";
-            this.PictureUserFemale.Size = new System.Drawing.Size(100, 96);
-            this.PictureUserFemale.TabIndex = 34;
-            this.PictureUserFemale.TabStop = false;
-            this.PictureUserFemale.Visible = false;
             // 
             // button3
             // 
@@ -247,6 +234,10 @@ namespace Presentation
             this.ChildPanel.Size = new System.Drawing.Size(944, 568);
             this.ChildPanel.TabIndex = 2;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,18 +253,17 @@ namespace Presentation
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUserMale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureUser)).EndInit();
             this.Bar_Principal.ResumeLayout(false);
             this.SliderPanel.ResumeLayout(false);
             this.SliderPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUserFemale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox PictureUserMale;
+        private System.Windows.Forms.PictureBox PictureUser;
         private System.Windows.Forms.Panel Bar_Principal;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button Minimizar;
@@ -285,7 +275,7 @@ namespace Presentation
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button AddService;
-        private System.Windows.Forms.PictureBox PictureUserFemale;
         private System.Windows.Forms.TextBox User;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 using Common.Cache;
 using Presentation.PanelSub;
+using Domain.Process;
 
 namespace Presentation
 {
@@ -21,25 +22,17 @@ namespace Presentation
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        Domain.Process.Process Pro = new Domain.Process.Process();
 
 
         public DashBoard()
         {
             InitializeComponent();
 
-            if (OpenChildForm(new Service())){Service.BackColor = Color.FromArgb(31, 82, 107);AddService.BackColor = Color.Transparent;}
+            if (OpenChildForm(new Service())){Service.BackColor = System.Drawing.Color.FromArgb(31, 82, 107);AddService.BackColor = System.Drawing.Color.Transparent;}
             
             User.Text = UserLoginCache.UserId.ToString();
-
-            if (UserLoginCache.Sexo == "Masculino")
-            {
-                PictureUserMale.Visible = true;
-            }
-            else
-                PictureUserFemale.Visible = true;
-
-
-
+            PictureUser.Image = UserLoginCache.Picture.Image;
         }
 
         private void Minimizar_Click(object sender, EventArgs e)
@@ -101,6 +94,31 @@ namespace Presentation
             {
                 AddService.BackColor = Color.FromArgb(31, 82, 107);
                 Service.BackColor = Color.Transparent;
+            }
+        }
+
+        private void PictureUser_Click(object sender, EventArgs e)
+        {
+            string User = UserLoginCache.UserId;
+            try
+            {
+                openFileDialog1.Filter = "Archivos jpg (*.jpg)|*.jpg";
+                openFileDialog1.FilterIndex = 1;
+                openFileDialog1.RestoreDirectory = true;
+                openFileDialog1.FileName = "";
+                if (this.openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+
+                    PictureUser.Load(this.openFileDialog1.FileName);
+
+                    Pro.UpdateProfilePicture(User, PictureUser);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                MessageBox.Show("No se pudo cargar la imagen de perfil");
             }
         }
     }

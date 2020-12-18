@@ -3,12 +3,13 @@
 USE PAYWITHSERVICES
 -------------------------------------------------
  GO
- if (OBJECT_ID ('USUARIO ', 'U')) is not null
+ if (OBJECT_ID ('USUARIO', 'U')) is not null
      DROP TABLE USUARIO ;
  GO
  CREATE TABLE USUARIO(
  USERACCOUNT NVARCHAR(15) PRIMARY KEY NOT NULL,
  PASSWORD NVARCHAR(20) NOT NULL,
+ PROFILEPICTURE IMAGE,
  CEDULA VARCHAR(9) UNIQUE NOT NULL,
  NOMBRE NVARCHAR(20) NOT NULL,
  APELLIDOS NVARCHAR (25) NOT NULL,
@@ -20,7 +21,7 @@ USE PAYWITHSERVICES
 
 -------------------------------------------------
  GO
- if (OBJECT_ID ('CARRERAS ', 'U')) is not null
+ if (OBJECT_ID ('CARRERAS', 'U')) is not null
      DROP TABLE CARRERAS ;
 
  CREATE TABLE CARRERAS(
@@ -29,7 +30,7 @@ USE PAYWITHSERVICES
 
 -------------------------------------------------
  GO
- if (OBJECT_ID ('SERVICIO ', 'U')) is not null
+ if (OBJECT_ID ('SERVICIO', 'U')) is not null
      DROP TABLE SERVICIO ;
 
  CREATE TABLE SERVICIO(
@@ -44,3 +45,6 @@ USE PAYWITHSERVICES
  DESCRIPCION2 NVARCHAR(300) NOT NULL,
  VALORPROME FLOAT NOT NULL
  )
+
+ Select * from USUARIO
+
