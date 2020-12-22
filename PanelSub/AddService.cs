@@ -2,12 +2,6 @@
 using Domain.Process;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain.Models;
 
@@ -50,7 +44,6 @@ namespace Presentation.PanelSub
             Servicio.Id_servicio = Id_Servicio.Text;
             Servicio.User = UserLoginCache.UserId;
             Servicio.Fecha = DateTime.Now.ToString("MM/dd/yyyy");
-            Console.WriteLine(Servicio.Fecha);
             Servicio.Area_Bri = AreaPro1.Text;
             Servicio.Nombre_Brin = NombreServicio1.Text;
             Servicio.Description1 = Description1.Text;
@@ -68,15 +61,62 @@ namespace Presentation.PanelSub
 
             if (Pro.InsertarServicio(servicio))
             {
-                MessageBox.Show("El servicio se ha publicado exitosamente");
+                MessageBox.Show("El servicio se ha publicado exitosamente","Publicación del Servicio");
+                LimpiarCasillas(); 
             }
             else
-                MessageBox.Show("Error al publicar el servicio");
+                MessageBox.Show("Error al publicar el servicio","Error en el Sistema");
+        }
+
+        private void UpServicio()
+        {
+            var servicio = Servicio();
+
+            if (Pro.UpServicio(servicio))
+            {
+                MessageBox.Show("El servicio se ha actualizado exitosamente", "Publicación del Servicio");
+                LimpiarCasillas();
+            }
+            else
+                MessageBox.Show("Error al actualizar el servicio", "Error en el Sistema");
         }
 
         private void Process_Click(object sender, EventArgs e)
         {
-            addServicio();
+            if (!Update.Checked)
+                addServicio();
+            else
+                UpServicio();
+        }
+
+        private void Consultar_Click(object sender, EventArgs e)
+        {
+            var sercicio = Pro.ConsultServicio(Id_Servicio.Text);
+
+            if (sercicio.User == UserLoginCache.UserId)
+            {
+                NombreServicio1.Text = sercicio.NombreBrin;
+                Description1.Text = sercicio.Description1;
+
+                AreaPro2.Text = sercicio.AreaBusq;
+                NombreServicio2.Text = sercicio.NombreBusq;
+                Description2.Text = sercicio.Description2;
+
+                ValorPRomedio.Text = sercicio.ValorPromedio.ToString();
+            }
+            else
+                MessageBox.Show("No se puede accesar al Servicio","Gestion de servicios");
+        }
+
+        private void LimpiarCasillas()
+        {
+            Id_Servicio.Text = "";
+            NombreServicio1.Text = "";
+            Description1.Text = "";
+            AreaPro2.SelectedItem = "Selecciona la Carrera: ";
+            NombreServicio2.Text = "";
+            Description2.Text = "";
+            ValorPRomedio.Text = "";
         }
     }
 }

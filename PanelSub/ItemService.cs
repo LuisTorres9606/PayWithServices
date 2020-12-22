@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Cache;
+using Domain.Process;
 
 namespace Presentation.PanelSub
 {
@@ -26,31 +27,50 @@ namespace Presentation.PanelSub
                int nHeightEllipse // width of ellipse
            );
 
+        readonly Process Pro = new Process();
+        readonly Servicio Servi;
+
         public ItemService(Servicio servicio)
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
 
-            Item(servicio);
+            Servi = servicio;
+
+            Item();
         }
 
-        public void Item(Servicio servicio)
+        public void Item()
         {
-            User.Text = servicio.User;
-            Fecha.Text = "Publicado: "+servicio.Fecha;
-            Brind.Text = servicio.NombreBrin;
-            Busque.Text = servicio.NombreBusq;
-            ValorPromedio.Text = "₡ "+ String.Format(CultureInfo.InvariantCulture, "{0:0,0.0}", servicio.ValorPromedio);
+            User.Text = Servi.User;
+            Fecha.Text = "Publicado: "+ Servi.Fecha;
+            Brind.Text = Servi.NombreBrin;
+            Busque.Text = Servi.NombreBusq;
+            ValorPromedio.Text = "₡ "+ String.Format(CultureInfo.InvariantCulture, "{0:0,0.0}", Servi.ValorPromedio);
 
-            if (servicio.User == UserLoginCache.UserId)
+            if (Servi.User == UserLoginCache.UserId)
             {
                 DeleteService.Visible = true;
             }
         }
 
-        private void v_Login_Click(object sender, EventArgs e)
+        private void User_Click(object sender, EventArgs e)
         {
+            InfoUser info = new InfoUser(User.Text);
+            info.Show();
 
+        }
+
+        private void DeleteService_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("¿Desea eliminar el Servicio?", "Eliminar Servicio", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (Pro.EliminarService(Servi.Id_Servicio))
+                {
+                    MessageBox.Show("Servicio Eliminado");
+                }
+            }            
         }
     }
 }

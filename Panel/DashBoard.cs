@@ -13,6 +13,7 @@ using System.Diagnostics;
 using Common.Cache;
 using Presentation.PanelSub;
 using Domain.Process;
+using System.Drawing.Drawing2D;
 
 namespace Presentation
 {
@@ -31,8 +32,33 @@ namespace Presentation
 
             if (OpenChildForm(new Service())){Service.BackColor = System.Drawing.Color.FromArgb(31, 82, 107);AddService.BackColor = System.Drawing.Color.Transparent;}
             
-            User.Text = UserLoginCache.UserId.ToString();
+            
+            PictureBox();
+            ButtonPhoto();
+            MenuUser();
+        }
+
+        private void PictureBox()
+        {
+            GraphicsPath gp = new GraphicsPath();
+            gp.AddEllipse(0, 0, PictureUser.Width - 3, PictureUser.Height - 3);
+            Region rg = new Region(gp);
+            PictureUser.Region = rg;
+
             PictureUser.Image = UserLoginCache.Picture.Image;
+        }
+
+        private void ButtonPhoto()
+        {
+            GraphicsPath p = new GraphicsPath();
+            p.AddEllipse(1, 1, UpPhoto.Width - 3, UpPhoto.Height - 3);
+            UpPhoto.Region = new Region(p);
+        }
+
+        public void MenuUser()
+        {
+            User.Text = UserLoginCache.Nombre +" "+UserLoginCache.Apellidos;
+            Correo.Text = UserLoginCache.Email;
         }
 
         private void Minimizar_Click(object sender, EventArgs e)
@@ -50,13 +76,6 @@ namespace Presentation
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }        
-
-        private void LogOut_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login_Principal _Principal = new Login_Principal();
-            _Principal.Show();
-        }
 
         //Método del ChildForm Login-SignIn
         private new Form ActiveForm = null;
@@ -79,25 +98,52 @@ namespace Presentation
             return true;
         }
 
+        private void AddService_Click(object sender, EventArgs e)
+        {
+            if (OpenChildForm(new AddService()))
+            {
+                AddService.BackColor = Color.FromArgb(31, 82, 107);
+                Service.BackColor = Color.Transparent;
+                MyServices.BackColor = Color.Transparent;
+                Information.BackColor = Color.Transparent;
+
+            }
+        }
+
         private void Service_Click(object sender, EventArgs e)
         {
             if (OpenChildForm(new Service()))
             {
                 Service.BackColor = Color.FromArgb(31, 82, 107);
                 AddService.BackColor = Color.Transparent;
+                MyServices.BackColor = Color.Transparent;
+                Information.BackColor = Color.Transparent;
             }
         }
 
-        private void AddService_Click(object sender, EventArgs e)
+        private void MyServices_Click(object sender, EventArgs e)
         {
-            if(OpenChildForm(new AddService()))
+            if (OpenChildForm(new MyServices()))
             {
-                AddService.BackColor = Color.FromArgb(31, 82, 107);
+                MyServices.BackColor = Color.FromArgb(31, 82, 107);
+                AddService.BackColor = Color.Transparent;
                 Service.BackColor = Color.Transparent;
+                Information.BackColor = Color.Transparent;
             }
         }
 
-        private void PictureUser_Click(object sender, EventArgs e)
+        private void Information_Click(object sender, EventArgs e)
+        {
+            if (OpenChildForm(new Information()))
+            {
+                Information.BackColor = Color.FromArgb(31, 82, 107);
+                AddService.BackColor = Color.Transparent;
+                Service.BackColor = Color.Transparent;
+                MyServices.BackColor = Color.Transparent;
+            }
+        }
+
+        private void UpPhoto_Click(object sender, EventArgs e)
         {
             string User = UserLoginCache.UserId;
             try
@@ -121,5 +167,22 @@ namespace Presentation
                 MessageBox.Show("No se pudo cargar la imagen de perfil");
             }
         }
+
+        private void PictureUser_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (Menu.Visible)
+                Menu.Visible = false;
+            else
+                Menu.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login_Principal _Principal = new Login_Principal();
+            _Principal.Show();
+        }
+
+
     }
 }

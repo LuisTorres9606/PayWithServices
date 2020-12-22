@@ -45,7 +45,7 @@ namespace Presentation.PanelSub
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 55);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(15, 30, 15, 0);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(15, 5, 15, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(958, 508);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
@@ -72,7 +72,7 @@ namespace Presentation.PanelSub
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.LogOut);
             this.panel2.Controls.Add(this.v_Email);
-            this.panel2.Location = new System.Drawing.Point(6, 12);
+            this.panel2.Location = new System.Drawing.Point(21, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(356, 37);
             this.panel2.TabIndex = 34;

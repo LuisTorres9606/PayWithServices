@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain.Models;
 using Domain.Process;
@@ -21,10 +15,13 @@ namespace Presentation
             Sexo();
             Carreras();
         }
+
+        #region Personalizacion
+        
         public void Sexo()
         {
             R_Sexo.DropDownStyle = ComboBoxStyle.DropDownList;
-            R_Sexo.Items.Insert(0, "Selecciona tu Sexo: ");
+            R_Sexo.Items.Insert(0, "Selecciona tu Genero: ");
             R_Sexo.Items.Insert(1, "Masculino");
             R_Sexo.Items.Insert(2, "Femenino");
             R_Sexo.SelectedIndex = 0;
@@ -234,6 +231,7 @@ namespace Presentation
                 R_Telefono.Text = "Telefono";
             }
         }
+        #endregion
 
         private UsuarioModel Model()
         {
@@ -261,6 +259,7 @@ namespace Presentation
                 if (Insertar.InsertarUsuario(Model(), ProfilePicture))
                 {
                     MessageBox.Show("El Usuario ha sido creado exitosamente");
+                    this.Hide();
                 }
                 else
                     MessageBox.Show("Error al Crear el Usuario");

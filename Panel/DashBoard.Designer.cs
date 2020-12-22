@@ -35,31 +35,34 @@ namespace Presentation
             this.Minimizar = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.SliderPanel = new System.Windows.Forms.Panel();
+            this.Menu = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Correo = new System.Windows.Forms.TextBox();
             this.User = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.UpPhoto = new System.Windows.Forms.Button();
+            this.Information = new System.Windows.Forms.Button();
+            this.MyServices = new System.Windows.Forms.Button();
             this.AddService = new System.Windows.Forms.Button();
-            this.LogOut = new System.Windows.Forms.Button();
             this.Service = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ChildPanel = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.PictureUser)).BeginInit();
             this.Bar_Principal.SuspendLayout();
             this.SliderPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // PictureUser
             // 
             this.PictureUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PictureUser.Location = new System.Drawing.Point(35, 32);
+            this.PictureUser.Location = new System.Drawing.Point(46, 32);
             this.PictureUser.Name = "PictureUser";
-            this.PictureUser.Size = new System.Drawing.Size(130, 125);
+            this.PictureUser.Size = new System.Drawing.Size(110, 110);
             this.PictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureUser.TabIndex = 2;
             this.PictureUser.TabStop = false;
-            this.PictureUser.Click += new System.EventHandler(this.PictureUser_Click);
+            this.PictureUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PictureUser_MouseClick);
             // 
             // Bar_Principal
             // 
@@ -105,13 +108,12 @@ namespace Presentation
             // SliderPanel
             // 
             this.SliderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
-            this.SliderPanel.Controls.Add(this.User);
-            this.SliderPanel.Controls.Add(this.button3);
-            this.SliderPanel.Controls.Add(this.button2);
+            this.SliderPanel.Controls.Add(this.Menu);
+            this.SliderPanel.Controls.Add(this.UpPhoto);
+            this.SliderPanel.Controls.Add(this.Information);
+            this.SliderPanel.Controls.Add(this.MyServices);
             this.SliderPanel.Controls.Add(this.AddService);
-            this.SliderPanel.Controls.Add(this.LogOut);
             this.SliderPanel.Controls.Add(this.Service);
-            this.SliderPanel.Controls.Add(this.pictureBox2);
             this.SliderPanel.Controls.Add(this.PictureUser);
             this.SliderPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SliderPanel.Location = new System.Drawing.Point(0, 0);
@@ -119,49 +121,122 @@ namespace Presentation
             this.SliderPanel.Size = new System.Drawing.Size(206, 600);
             this.SliderPanel.TabIndex = 0;
             // 
+            // Menu
+            // 
+            this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
+            this.Menu.Controls.Add(this.button4);
+            this.Menu.Controls.Add(this.button1);
+            this.Menu.Controls.Add(this.Correo);
+            this.Menu.Controls.Add(this.User);
+            this.Menu.Location = new System.Drawing.Point(0, 142);
+            this.Menu.Name = "Menu";
+            this.Menu.Size = new System.Drawing.Size(206, 223);
+            this.Menu.TabIndex = 36;
+            this.Menu.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Location = new System.Drawing.Point(0, 82);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(206, 31);
+            this.button4.TabIndex = 39;
+            this.button4.Text = "Gestionar Cuenta";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(0, 190);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(206, 32);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Cerrar Sesión";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Correo
+            // 
+            this.Correo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
+            this.Correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Correo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Correo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Correo.Location = new System.Drawing.Point(13, 31);
+            this.Correo.Name = "Correo";
+            this.Correo.Size = new System.Drawing.Size(180, 15);
+            this.Correo.TabIndex = 37;
+            this.Correo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // User
             // 
-            this.User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
+            this.User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
             this.User.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.User.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.User.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.User.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.User.Location = new System.Drawing.Point(29, 163);
+            this.User.Location = new System.Drawing.Point(6, 6);
             this.User.Name = "User";
-            this.User.Size = new System.Drawing.Size(141, 20);
+            this.User.Size = new System.Drawing.Size(194, 16);
             this.User.TabIndex = 35;
             this.User.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button3
+            // UpPhoto
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(-1, 326);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(207, 40);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
+            this.UpPhoto.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.UpPhoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UpPhoto.BackgroundImage")));
+            this.UpPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.UpPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpPhoto.Location = new System.Drawing.Point(116, 102);
+            this.UpPhoto.Name = "UpPhoto";
+            this.UpPhoto.Size = new System.Drawing.Size(40, 40);
+            this.UpPhoto.TabIndex = 37;
+            this.UpPhoto.UseVisualStyleBackColor = false;
+            this.UpPhoto.Click += new System.EventHandler(this.UpPhoto_Click);
             // 
-            // button2
+            // Information
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(-1, 285);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(207, 40);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Information.BackColor = System.Drawing.Color.Transparent;
+            this.Information.FlatAppearance.BorderSize = 0;
+            this.Information.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.Information.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.Information.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Information.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.Information.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Information.Location = new System.Drawing.Point(-1, 323);
+            this.Information.Name = "Information";
+            this.Information.Size = new System.Drawing.Size(207, 40);
+            this.Information.TabIndex = 33;
+            this.Information.Text = "Información";
+            this.Information.UseVisualStyleBackColor = false;
+            this.Information.Click += new System.EventHandler(this.Information_Click);
+            // 
+            // MyServices
+            // 
+            this.MyServices.BackColor = System.Drawing.Color.Transparent;
+            this.MyServices.FlatAppearance.BorderSize = 0;
+            this.MyServices.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.MyServices.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.MyServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MyServices.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.MyServices.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.MyServices.Location = new System.Drawing.Point(-1, 283);
+            this.MyServices.Name = "MyServices";
+            this.MyServices.Size = new System.Drawing.Size(207, 40);
+            this.MyServices.TabIndex = 32;
+            this.MyServices.Text = "Mis Servicios";
+            this.MyServices.UseVisualStyleBackColor = false;
+            this.MyServices.Click += new System.EventHandler(this.MyServices_Click);
             // 
             // AddService
             // 
@@ -176,27 +251,9 @@ namespace Presentation
             this.AddService.Name = "AddService";
             this.AddService.Size = new System.Drawing.Size(207, 40);
             this.AddService.TabIndex = 31;
-            this.AddService.Text = "New Service";
+            this.AddService.Text = "Nuevo Servicio";
             this.AddService.UseVisualStyleBackColor = false;
             this.AddService.Click += new System.EventHandler(this.AddService_Click);
-            // 
-            // LogOut
-            // 
-            this.LogOut.BackColor = System.Drawing.Color.Transparent;
-            this.LogOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogOut.FlatAppearance.BorderSize = 0;
-            this.LogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.LogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOut.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LogOut.Location = new System.Drawing.Point(48, 559);
-            this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(87, 29);
-            this.LogOut.TabIndex = 3;
-            this.LogOut.Text = "Log Out";
-            this.LogOut.UseVisualStyleBackColor = false;
-            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
             // 
             // Service
             // 
@@ -211,20 +268,9 @@ namespace Presentation
             this.Service.Name = "Service";
             this.Service.Size = new System.Drawing.Size(207, 40);
             this.Service.TabIndex = 2;
-            this.Service.Text = "Services";
+            this.Service.Text = "Servicios";
             this.Service.UseVisualStyleBackColor = false;
             this.Service.Click += new System.EventHandler(this.Service_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 559);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 29);
-            this.pictureBox2.TabIndex = 30;
-            this.pictureBox2.TabStop = false;
             // 
             // ChildPanel
             // 
@@ -256,8 +302,8 @@ namespace Presentation
             ((System.ComponentModel.ISupportInitialize)(this.PictureUser)).EndInit();
             this.Bar_Principal.ResumeLayout(false);
             this.SliderPanel.ResumeLayout(false);
-            this.SliderPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Menu.ResumeLayout(false);
+            this.Menu.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -269,13 +315,16 @@ namespace Presentation
         private System.Windows.Forms.Button Minimizar;
         private System.Windows.Forms.Panel SliderPanel;
         private System.Windows.Forms.Button Service;
-        private System.Windows.Forms.Button LogOut;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel ChildPanel;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Information;
+        private System.Windows.Forms.Button MyServices;
         private System.Windows.Forms.Button AddService;
         private System.Windows.Forms.TextBox User;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Panel Menu;
+        private System.Windows.Forms.Button UpPhoto;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox Correo;
     }
 }

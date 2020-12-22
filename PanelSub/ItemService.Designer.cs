@@ -30,37 +30,20 @@ namespace Presentation.PanelSub
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemService));
-            this.v_Login = new System.Windows.Forms.Button();
             this.User = new System.Windows.Forms.TextBox();
             this.Busque = new System.Windows.Forms.TextBox();
             this.Brind = new System.Windows.Forms.TextBox();
             this.ValorPromedio = new System.Windows.Forms.TextBox();
-            this.DeleteService = new System.Windows.Forms.Button();
             this.Fecha = new System.Windows.Forms.TextBox();
+            this.DeleteService = new System.Windows.Forms.Button();
+            this.v_Login = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // v_Login
-            // 
-            this.v_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
-            this.v_Login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("v_Login.BackgroundImage")));
-            this.v_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.v_Login.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.v_Login.FlatAppearance.BorderSize = 0;
-            this.v_Login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
-            this.v_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
-            this.v_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.v_Login.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.v_Login.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.v_Login.Location = new System.Drawing.Point(242, 143);
-            this.v_Login.Name = "v_Login";
-            this.v_Login.Size = new System.Drawing.Size(27, 26);
-            this.v_Login.TabIndex = 1;
-            this.v_Login.UseVisualStyleBackColor = false;
             // 
             // User
             // 
             this.User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
             this.User.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.User.Cursor = System.Windows.Forms.Cursors.Hand;
             this.User.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.User.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.User.Location = new System.Drawing.Point(16, 15);
@@ -68,6 +51,7 @@ namespace Presentation.PanelSub
             this.User.ReadOnly = true;
             this.User.Size = new System.Drawing.Size(169, 19);
             this.User.TabIndex = 3;
+            this.User.Click += new System.EventHandler(this.User_Click);
             // 
             // Busque
             // 
@@ -105,23 +89,6 @@ namespace Presentation.PanelSub
             this.ValorPromedio.Size = new System.Drawing.Size(169, 19);
             this.ValorPromedio.TabIndex = 6;
             // 
-            // DeleteService
-            // 
-            this.DeleteService.BackColor = System.Drawing.Color.Transparent;
-            this.DeleteService.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteService.BackgroundImage")));
-            this.DeleteService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DeleteService.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DeleteService.FlatAppearance.BorderSize = 0;
-            this.DeleteService.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
-            this.DeleteService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
-            this.DeleteService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteService.Location = new System.Drawing.Point(270, 4);
-            this.DeleteService.Name = "DeleteService";
-            this.DeleteService.Size = new System.Drawing.Size(21, 21);
-            this.DeleteService.TabIndex = 22;
-            this.DeleteService.UseVisualStyleBackColor = false;
-            this.DeleteService.Visible = false;
-            // 
             // Fecha
             // 
             this.Fecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
@@ -133,6 +100,42 @@ namespace Presentation.PanelSub
             this.Fecha.ReadOnly = true;
             this.Fecha.Size = new System.Drawing.Size(198, 19);
             this.Fecha.TabIndex = 23;
+            // 
+            // DeleteService
+            // 
+            this.DeleteService.BackColor = System.Drawing.Color.Transparent;
+            this.DeleteService.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteService.BackgroundImage")));
+            this.DeleteService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DeleteService.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteService.FlatAppearance.BorderSize = 0;
+            this.DeleteService.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
+            this.DeleteService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
+            this.DeleteService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteService.Location = new System.Drawing.Point(270, 4);
+            this.DeleteService.Name = "DeleteService";
+            this.DeleteService.Size = new System.Drawing.Size(21, 21);
+            this.DeleteService.TabIndex = 22;
+            this.DeleteService.UseVisualStyleBackColor = false;
+            this.DeleteService.Visible = false;
+            this.DeleteService.Click += new System.EventHandler(this.DeleteService_Click);
+            // 
+            // v_Login
+            // 
+            this.v_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
+            this.v_Login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("v_Login.BackgroundImage")));
+            this.v_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.v_Login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.v_Login.FlatAppearance.BorderSize = 0;
+            this.v_Login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
+            this.v_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
+            this.v_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.v_Login.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.v_Login.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.v_Login.Location = new System.Drawing.Point(242, 143);
+            this.v_Login.Name = "v_Login";
+            this.v_Login.Size = new System.Drawing.Size(27, 26);
+            this.v_Login.TabIndex = 1;
+            this.v_Login.UseVisualStyleBackColor = false;
             // 
             // ItemService
             // 

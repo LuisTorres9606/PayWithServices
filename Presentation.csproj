@@ -74,11 +74,29 @@
     <Compile Include="PanelSub\AddService.Designer.cs">
       <DependentUpon>AddService.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelSub\Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelSub\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelSub\InfoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelSub\InfoUser.Designer.cs">
+      <DependentUpon>InfoUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelSub\ItemService.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PanelSub\ItemService.Designer.cs">
       <DependentUpon>ItemService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelSub\MyServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelSub\MyServices.Designer.cs">
+      <DependentUpon>MyServices.cs</DependentUpon>
     </Compile>
     <Compile Include="PanelSub\Service.cs">
       <SubType>Form</SubType>
@@ -115,8 +133,17 @@
     <EmbeddedResource Include="PanelSub\AddService.resx">
       <DependentUpon>AddService.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PanelSub\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelSub\InfoUser.resx">
+      <DependentUpon>InfoUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PanelSub\ItemService.resx">
       <DependentUpon>ItemService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelSub\MyServices.resx">
+      <DependentUpon>MyServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelSub\Service.resx">
       <DependentUpon>Service.cs</DependentUpon>
