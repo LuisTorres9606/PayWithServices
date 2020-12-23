@@ -37,6 +37,7 @@ namespace Presentation.PanelSub
             this.Fecha = new System.Windows.Forms.TextBox();
             this.v_Login = new System.Windows.Forms.Button();
             this.DeleteService = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // User
@@ -46,7 +47,7 @@ namespace Presentation.PanelSub
             this.User.Cursor = System.Windows.Forms.Cursors.Hand;
             this.User.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.User.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.User.Location = new System.Drawing.Point(16, 15);
+            this.User.Location = new System.Drawing.Point(16, 9);
             this.User.Name = "User";
             this.User.ReadOnly = true;
             this.User.Size = new System.Drawing.Size(169, 19);
@@ -59,10 +60,10 @@ namespace Presentation.PanelSub
             this.Busque.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Busque.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Busque.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Busque.Location = new System.Drawing.Point(16, 80);
+            this.Busque.Location = new System.Drawing.Point(16, 107);
             this.Busque.Name = "Busque";
             this.Busque.ReadOnly = true;
-            this.Busque.Size = new System.Drawing.Size(169, 19);
+            this.Busque.Size = new System.Drawing.Size(149, 19);
             this.Busque.TabIndex = 4;
             // 
             // Brind
@@ -71,7 +72,7 @@ namespace Presentation.PanelSub
             this.Brind.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Brind.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Brind.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Brind.Location = new System.Drawing.Point(16, 112);
+            this.Brind.Location = new System.Drawing.Point(16, 140);
             this.Brind.Name = "Brind";
             this.Brind.ReadOnly = true;
             this.Brind.Size = new System.Drawing.Size(169, 19);
@@ -83,7 +84,7 @@ namespace Presentation.PanelSub
             this.ValorPromedio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ValorPromedio.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValorPromedio.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ValorPromedio.Location = new System.Drawing.Point(16, 144);
+            this.ValorPromedio.Location = new System.Drawing.Point(16, 172);
             this.ValorPromedio.Name = "ValorPromedio";
             this.ValorPromedio.ReadOnly = true;
             this.ValorPromedio.Size = new System.Drawing.Size(169, 19);
@@ -95,7 +96,7 @@ namespace Presentation.PanelSub
             this.Fecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Fecha.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Fecha.Location = new System.Drawing.Point(16, 50);
+            this.Fecha.Location = new System.Drawing.Point(16, 75);
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
             this.Fecha.Size = new System.Drawing.Size(198, 19);
@@ -113,7 +114,7 @@ namespace Presentation.PanelSub
             this.v_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.v_Login.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.v_Login.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.v_Login.Location = new System.Drawing.Point(242, 143);
+            this.v_Login.Location = new System.Drawing.Point(249, 162);
             this.v_Login.Name = "v_Login";
             this.v_Login.Size = new System.Drawing.Size(27, 26);
             this.v_Login.TabIndex = 1;
@@ -138,11 +139,25 @@ namespace Presentation.PanelSub
             this.DeleteService.Visible = false;
             this.DeleteService.Click += new System.EventHandler(this.DeleteService_Click);
             // 
+            // Id
+            // 
+            this.Id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
+            this.Id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Id.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Id.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Id.Location = new System.Drawing.Point(16, 41);
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Size = new System.Drawing.Size(65, 19);
+            this.Id.TabIndex = 24;
+            // 
             // ItemService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
+            this.Controls.Add(this.Id);
             this.Controls.Add(this.Fecha);
             this.Controls.Add(this.DeleteService);
             this.Controls.Add(this.ValorPromedio);
@@ -151,7 +166,7 @@ namespace Presentation.PanelSub
             this.Controls.Add(this.User);
             this.Controls.Add(this.v_Login);
             this.Name = "ItemService";
-            this.Size = new System.Drawing.Size(295, 177);
+            this.Size = new System.Drawing.Size(295, 200);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +181,6 @@ namespace Presentation.PanelSub
         private System.Windows.Forms.TextBox ValorPromedio;
         private System.Windows.Forms.TextBox Fecha;
         private System.Windows.Forms.Button DeleteService;
+        private System.Windows.Forms.TextBox Id;
     }
 }

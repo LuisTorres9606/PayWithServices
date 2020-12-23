@@ -183,6 +183,9 @@ namespace Presentation
             _Principal.Show();
         }
 
-
+        private void GestionarCuenta_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Information());
+        }
     }
 }

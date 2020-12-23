@@ -64,7 +64,7 @@ namespace Presentation
             this.v_Email.Name = "v_Email";
             this.v_Email.Size = new System.Drawing.Size(264, 20);
             this.v_Email.TabIndex = 2;
-            this.v_Email.Text = "Luisfer9606";
+            this.v_Email.Text = "Usuario";
             this.v_Email.Enter += new System.EventHandler(this.v_Email_Enter);
             this.v_Email.Leave += new System.EventHandler(this.v_Email_Leave);
             // 
@@ -78,7 +78,7 @@ namespace Presentation
             this.v_Password.Name = "v_Password";
             this.v_Password.Size = new System.Drawing.Size(236, 20);
             this.v_Password.TabIndex = 3;
-            this.v_Password.Text = "Wen9803";
+            this.v_Password.Text = "Password";
             this.v_Password.Enter += new System.EventHandler(this.v_Password_Enter);
             this.v_Password.Leave += new System.EventHandler(this.v_Password_Leave);
             // 
@@ -227,7 +227,7 @@ namespace Presentation
             // 
             this.ErroLogin.AutoSize = true;
             this.ErroLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErroLogin.ForeColor = System.Drawing.Color.Red;
+            this.ErroLogin.ForeColor = System.Drawing.Color.Brown;
             this.ErroLogin.Location = new System.Drawing.Point(93, 277);
             this.ErroLogin.Name = "ErroLogin";
             this.ErroLogin.Size = new System.Drawing.Size(308, 20);

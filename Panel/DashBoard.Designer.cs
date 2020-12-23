@@ -36,7 +36,7 @@ namespace Presentation
             this.Exit = new System.Windows.Forms.Button();
             this.SliderPanel = new System.Windows.Forms.Panel();
             this.Menu = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.GestionarCuenta = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Correo = new System.Windows.Forms.TextBox();
             this.User = new System.Windows.Forms.TextBox();
@@ -124,31 +124,32 @@ namespace Presentation
             // Menu
             // 
             this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
-            this.Menu.Controls.Add(this.button4);
+            this.Menu.Controls.Add(this.GestionarCuenta);
             this.Menu.Controls.Add(this.button1);
             this.Menu.Controls.Add(this.Correo);
             this.Menu.Controls.Add(this.User);
-            this.Menu.Location = new System.Drawing.Point(0, 142);
+            this.Menu.Location = new System.Drawing.Point(1, 142);
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(206, 223);
             this.Menu.TabIndex = 36;
             this.Menu.Visible = false;
             // 
-            // button4
+            // GestionarCuenta
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(0, 82);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(206, 31);
-            this.button4.TabIndex = 39;
-            this.button4.Text = "Gestionar Cuenta";
-            this.button4.UseVisualStyleBackColor = false;
+            this.GestionarCuenta.BackColor = System.Drawing.Color.Transparent;
+            this.GestionarCuenta.FlatAppearance.BorderSize = 0;
+            this.GestionarCuenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.GestionarCuenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(82)))), ((int)(((byte)(107)))));
+            this.GestionarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GestionarCuenta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GestionarCuenta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.GestionarCuenta.Location = new System.Drawing.Point(0, 82);
+            this.GestionarCuenta.Name = "GestionarCuenta";
+            this.GestionarCuenta.Size = new System.Drawing.Size(206, 31);
+            this.GestionarCuenta.TabIndex = 39;
+            this.GestionarCuenta.Text = "Gestionar Cuenta";
+            this.GestionarCuenta.UseVisualStyleBackColor = false;
+            this.GestionarCuenta.Click += new System.EventHandler(this.GestionarCuenta_Click);
             // 
             // button1
             // 
@@ -324,7 +325,7 @@ namespace Presentation
         private System.Windows.Forms.Panel Menu;
         private System.Windows.Forms.Button UpPhoto;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button GestionarCuenta;
         private System.Windows.Forms.TextBox Correo;
     }
 }

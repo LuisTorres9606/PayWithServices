@@ -32,19 +32,29 @@ namespace Presentation.ReportView
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ServicioCD = new Presentation.ReportView.ServicioCD();
             this.Bar_Principal = new System.Windows.Forms.Panel();
             this.Minimizar = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ServicioCD = new Presentation.ReportView.ServicioCD();
             this.DataTable1TableAdapter = new Presentation.ReportView.ServicioCDTableAdapters.DataTable1TableAdapter();
-            this.Bar_Principal.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServicioCD)).BeginInit();
+            this.Bar_Principal.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.ServicioCD;
+            // 
+            // ServicioCD
+            // 
+            this.ServicioCD.DataSetName = "ServicioCD";
+            this.ServicioCD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Bar_Principal
             // 
@@ -54,7 +64,7 @@ namespace Presentation.ReportView
             this.Bar_Principal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Bar_Principal.Location = new System.Drawing.Point(0, 0);
             this.Bar_Principal.Name = "Bar_Principal";
-            this.Bar_Principal.Size = new System.Drawing.Size(800, 26);
+            this.Bar_Principal.Size = new System.Drawing.Size(800, 36);
             this.Bar_Principal.TabIndex = 2;
             // 
             // Minimizar
@@ -107,16 +117,6 @@ namespace Presentation.ReportView
             this.reportViewer1.Size = new System.Drawing.Size(800, 418);
             this.reportViewer1.TabIndex = 0;
             // 
-            // DataTable1BindingSource
-            // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.ServicioCD;
-            // 
-            // ServicioCD
-            // 
-            this.ServicioCD.DataSetName = "ServicioCD";
-            this.ServicioCD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // DataTable1TableAdapter
             // 
             this.DataTable1TableAdapter.ClearBeforeFill = true;
@@ -133,10 +133,10 @@ namespace Presentation.ReportView
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Report_Load);
-            this.Bar_Principal.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServicioCD)).EndInit();
+            this.Bar_Principal.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

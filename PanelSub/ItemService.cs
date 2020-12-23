@@ -43,6 +43,7 @@ namespace Presentation.PanelSub
 
         public void Item()
         {
+            Id.Text = "ID: " + Servi.Id_Servicio;
             User.Text = Servi.User;
             Fecha.Text = "Publicado: " + Servi.Fecha;
             Brind.Text = Servi.NombreBrin;

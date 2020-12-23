@@ -50,7 +50,7 @@ namespace Presentation
        
         private void v_Email_Enter(object sender, EventArgs e)
         {
-            if(v_Email.Text == "User")
+            if(v_Email.Text == "Usuario")
             {
                 v_Email.Text = "";
             }
@@ -60,7 +60,7 @@ namespace Presentation
         {
             if (v_Email.Text == "")
             {
-                v_Email.Text = "User";
+                v_Email.Text = "Usuario";
             }
         }
 
@@ -96,8 +96,8 @@ namespace Presentation
 
         public void LoginUser()
         {
-            if (v_Email.Text != "User") {
-                if (v_Password.Text != "PassWord")
+            if (v_Email.Text != "Usuario") {
+                if (v_Password.Text != "Password")
                 {
                     Process ValidacionLogin = new Process();
                     var Log = ValidacionLogin.LoginUser(v_Email.Text, v_Password.Text);
@@ -114,9 +114,9 @@ namespace Presentation
                     }
                     else MsgError("Usuario o Contraseña son Incorrectos");
                 }
-                else MsgError("Please Enter Username ");
+                else MsgError("Please Enter Password");
             }
-            else MsgError("Please Enter Password");
+            else MsgError("Please Enter Username");
         }
 
         private void MsgError(string Msg)
