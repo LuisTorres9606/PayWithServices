@@ -35,8 +35,8 @@ namespace Presentation.PanelSub
             this.Brind = new System.Windows.Forms.TextBox();
             this.ValorPromedio = new System.Windows.Forms.TextBox();
             this.Fecha = new System.Windows.Forms.TextBox();
-            this.DeleteService = new System.Windows.Forms.Button();
             this.v_Login = new System.Windows.Forms.Button();
+            this.DeleteService = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // User
@@ -101,24 +101,6 @@ namespace Presentation.PanelSub
             this.Fecha.Size = new System.Drawing.Size(198, 19);
             this.Fecha.TabIndex = 23;
             // 
-            // DeleteService
-            // 
-            this.DeleteService.BackColor = System.Drawing.Color.Transparent;
-            this.DeleteService.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteService.BackgroundImage")));
-            this.DeleteService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DeleteService.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DeleteService.FlatAppearance.BorderSize = 0;
-            this.DeleteService.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
-            this.DeleteService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
-            this.DeleteService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteService.Location = new System.Drawing.Point(270, 4);
-            this.DeleteService.Name = "DeleteService";
-            this.DeleteService.Size = new System.Drawing.Size(21, 21);
-            this.DeleteService.TabIndex = 22;
-            this.DeleteService.UseVisualStyleBackColor = false;
-            this.DeleteService.Visible = false;
-            this.DeleteService.Click += new System.EventHandler(this.DeleteService_Click);
-            // 
             // v_Login
             // 
             this.v_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(56)))), ((int)(((byte)(61)))));
@@ -136,6 +118,25 @@ namespace Presentation.PanelSub
             this.v_Login.Size = new System.Drawing.Size(27, 26);
             this.v_Login.TabIndex = 1;
             this.v_Login.UseVisualStyleBackColor = false;
+            this.v_Login.Click += new System.EventHandler(this.v_Login_Click);
+            // 
+            // DeleteService
+            // 
+            this.DeleteService.BackColor = System.Drawing.Color.Transparent;
+            this.DeleteService.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteService.BackgroundImage")));
+            this.DeleteService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DeleteService.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteService.FlatAppearance.BorderSize = 0;
+            this.DeleteService.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
+            this.DeleteService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(82)))), ((int)(((byte)(93)))));
+            this.DeleteService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteService.Location = new System.Drawing.Point(270, 4);
+            this.DeleteService.Name = "DeleteService";
+            this.DeleteService.Size = new System.Drawing.Size(21, 21);
+            this.DeleteService.TabIndex = 22;
+            this.DeleteService.UseVisualStyleBackColor = false;
+            this.DeleteService.Visible = false;
+            this.DeleteService.Click += new System.EventHandler(this.DeleteService_Click);
             // 
             // ItemService
             // 
@@ -163,7 +164,7 @@ namespace Presentation.PanelSub
         private System.Windows.Forms.TextBox Busque;
         private System.Windows.Forms.TextBox Brind;
         private System.Windows.Forms.TextBox ValorPromedio;
-        private System.Windows.Forms.Button DeleteService;
         private System.Windows.Forms.TextBox Fecha;
+        private System.Windows.Forms.Button DeleteService;
     }
 }

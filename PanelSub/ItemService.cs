@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Cache;
 using Domain.Process;
+using Presentation.ReportView;
 
 namespace Presentation.PanelSub
 {
@@ -43,10 +44,10 @@ namespace Presentation.PanelSub
         public void Item()
         {
             User.Text = Servi.User;
-            Fecha.Text = "Publicado: "+ Servi.Fecha;
+            Fecha.Text = "Publicado: " + Servi.Fecha;
             Brind.Text = Servi.NombreBrin;
             Busque.Text = Servi.NombreBusq;
-            ValorPromedio.Text = "₡ "+ String.Format(CultureInfo.InvariantCulture, "{0:0,0.0}", Servi.ValorPromedio);
+            ValorPromedio.Text = "₡ " + String.Format(CultureInfo.InvariantCulture, "{0:0,0.0}", Servi.ValorPromedio);
 
             if (Servi.User == UserLoginCache.UserId)
             {
@@ -70,7 +71,13 @@ namespace Presentation.PanelSub
                 {
                     MessageBox.Show("Servicio Eliminado");
                 }
-            }            
+            }
+        }
+
+        private void v_Login_Click(object sender, EventArgs e)
+        {
+            Report ReportServicio = new Report(Servi.Id_Servicio);
+            ReportServicio.Show();
         }
     }
 }

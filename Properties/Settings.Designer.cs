@@ -22,5 +22,16 @@ namespace Presentation.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-FOB2S6T;Initial Catalog=PAYWITHSERVICES;Integrated Security=T" +
+            "rue")]
+        public string PAYWITHSERVICESConnectionString {
+            get {
+                return ((string)(this["PAYWITHSERVICESConnectionString"]));
+            }
+        }
     }
 }

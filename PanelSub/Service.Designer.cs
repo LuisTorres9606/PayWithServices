@@ -76,6 +76,7 @@ namespace Presentation.PanelSub
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(356, 37);
             this.panel2.TabIndex = 34;
+            this.panel2.Visible = false;
             // 
             // pictureBox2
             // 
